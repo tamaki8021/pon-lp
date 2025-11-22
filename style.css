@@ -1,0 +1,564 @@
+:root {
+    --bg-color: #FDF9F0;
+    --text-color: #4A4A4A;
+    --accent-color: #FF9B7F;
+    --secondary-color: #FFD4C4;
+    --font-family: "Inter", "Noto Sans JP", sans-serif;
+    --spacing-unit: 1rem;
+    --border-radius: 24px;
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 140px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 16px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #666, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.store-btn {
+    background: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Features Section */
+.features {
+    padding: 120px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 48px;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Screenshots Section */
+.screenshots {
+    padding: 120px 0;
+    background-color: #FFFBF5;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.section-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.screenshots-grid img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.screenshots-grid img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Concept Section */
+.concept {
+    padding: 120px 0;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 155, 127, 0.03) 100%);
+}
+
+.concept-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.concept p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: #666;
+}
+
+.concept strong {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    display: block;
+    margin-top: 16px;
+}
+
+/* Footer */
+footer {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.footer-links a {
+    color: #666;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pc-only {
+        display: none;
+    }
+}
+
+/* Use Cases Section */
+.use-cases {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.use-cases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.use-case-item {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    background: #FFFBF5;
+    border: 1px solid #F5EDE0;
+    transition: transform 0.3s ease;
+}
+
+.use-case-item:hover {
+    transform: translateX(10px);
+    border-color: var(--accent-color);
+}
+
+.use-case-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    opacity: 0.3;
+    line-height: 1;
+    font-family: var(--font-family);
+}
+
+.use-case-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.use-case-content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 120px 0;
+    background-color: #FDF6EB;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.benefit-card {
+    background: #fff;
+    padding: 48px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-color), var(--secondary-color));
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.benefit-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* CTA Section */
+.cta {
+    padding: 140px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #FFFBF5 0%, #FDF6EB 100%);
+}
+
+.cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.cta .store-buttons {
+    justify-content: center;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .use-case-item {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .use-case-number {
+        font-size: 2.5rem;
+    }
+
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Intro Section */
+.intro {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 2;
+}
+
+/* Brand Core Section */
+.brand-core {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.brand-core-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.core-item {
+    padding: 24px;
+    border-left: 4px solid var(--accent-color);
+    background: #fcfcfc;
+}
+
+.core-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.core-item p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 120px 0;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 155, 127, 0.05) 100%);
+}
+
+.philosophy-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.philosophy h2 {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.philosophy p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: #666;
+}
+
+.philosophy strong {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    display: block;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #eee;
+}
+
+/* Scroll Animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays for grid items */
+.features-grid .feature-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.features-grid .feature-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.features-grid .feature-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.features-grid .feature-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.features-grid .feature-card:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.use-cases-list .use-case-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.use-cases-list .use-case-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.use-cases-list .use-case-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.benefits-grid .benefit-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.benefits-grid .benefit-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.benefits-grid .benefit-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.benefits-grid .benefit-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.benefits-grid .benefit-card:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.brand-core-list .core-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.brand-core-list .core-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.brand-core-list .core-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.brand-core-list .core-item:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.brand-core-list .core-item:nth-child(5) {
+    transition-delay: 0.5s;
+}

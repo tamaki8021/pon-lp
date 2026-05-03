@@ -39,6 +39,53 @@ a:hover {
     padding: 0 20px;
 }
 
+/* Header */
+.global-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.web-login-btn {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 10px 24px;
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.web-login-btn::after {
+    content: "→";
+    font-family: var(--font-family);
+    transition: transform 0.3s ease;
+}
+
+.web-login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 155, 127, 0.15); /* Soft accent color shadow */
+    color: var(--accent-color);
+    opacity: 1; /* override default a:hover opacity */
+}
+
+.web-login-btn:hover::after {
+    transform: translateX(4px);
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
@@ -80,6 +127,7 @@ a:hover {
     gap: 16px;
     justify-content: center;
     margin-top: 32px;
+    flex-wrap: wrap;
 }
 
 .store-btn {
